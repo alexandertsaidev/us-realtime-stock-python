@@ -1,0 +1,14 @@
+{
+    "python.terminal.useEnvFile": true,
+    "python.testing.pytestArgs": [
+        "tests"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true,
+    "editor.rulers": [
+        
+        88
+    ],
+    "telemetry.feedback.enabled": false,
+    "telemetry.editStats.enabled": false
+}

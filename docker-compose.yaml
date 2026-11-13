@@ -1,0 +1,25 @@
+services:
+  kafka-producer:
+    image: us-rt-stock-python:v2.0
+    container_name: kafka-producer
+    command: ["python", "-m", "producer_main"]
+    restart: "on-failure:3"
+    env_file:
+      - .env
+    networks:
+      - realtime-network
+
+  kafka-consumer:
+    image: us-rt-stock-python:v2.0
+    container_name: kafka-consumer
+    command: ["python", "-m", "consumer_main"]
+    restart: "on-failure:3"
+    env_file:
+      - .env
+    networks:
+      - realtime-network
+
+networks:
+  realtime-network:        # compose 內部引用的別名
+    external: true
+    name: realtime-workspace_default # 指定實際的網路名稱

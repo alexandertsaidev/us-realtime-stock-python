@@ -1,0 +1,194 @@
+# ==============================================================================
+# Created by https://dockerignore.com/
+# LANGUAGE TEMPLATE for Python
+# Website: https://www.python.org/
+# Repository: https://github.com/python/cpython
+# ==============================================================================
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# TEMPLATE OVERVIEW & USAGE NOTES
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# • TEMPLATE TYPE: LANGUAGE TEMPLATE
+# • PURPOSE: Python-specific patterns for Docker builds
+# • DESIGN PHILOSOPHY: Contains only Python-specific patterns (no security patterns)
+# • COMBINATION GUIDANCE: Combine with framework or common templates as needed
+# • SECURITY CONSIDERATIONS: Does NOT include security patterns (use common/security.dockerignore)
+# • BEST PRACTICES: Combine with security template for complete protection
+# • OFFICIAL SOURCES: Python community patterns and Docker best practices
+
+# ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+# Build Artifacts
+# ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+**/.eggs/
+**/develop-eggs/
+**/eggs/
+**/parts/
+**/share/python-wheels/
+**/wheels/
+
+MANIFEST
+
+*$py.class
+*.egg
+*.egg-info/
+*.manifest
+*.mo
+*.pot
+*.py,cover
+*.py[cod]
+*.sage.py
+*.spec
+
+# ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+# Cache & Temporary
+# ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+**/.mypy_cache/
+**/.pyre/
+**/.pytype/
+**/.ruff_cache/
+**/__pycache__/
+**/cython_debug/
+**/downloads/
+
+.ipynb_checkpoints
+.installed.cfg
+
+celerybeat-schedule
+celerybeat.pid
+pip-delete-this-directory.txt
+
+# ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+# Dependencies
+# ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+**/__pypackages__/
+**/ENV/
+**/env/
+**/env.bak/
+**/venv/
+**/venv.bak/
+**/virtualenv/
+
+.venv/
+
+# ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+# Logs & Debug
+# ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+pip-log.txt
+
+# ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+# Testing
+# ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+**/.cover/
+**/.hypothesis/
+**/.nose/
+**/.nox/
+**/.pytest_cache/
+**/.tox/
+**/cover/
+
+.nosetests.xml
+
+# ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+# Tools & Configuration
+# ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+**/.hatch/
+**/.instance/
+**/.profile_default/
+**/.pybuilder/
+**/.pyenv/
+**/.pypackages/
+**/.uv/
+
+.dmypy.json
+.pdm.toml
+.Python
+.python-version
+.scrapy
+.webassets-cache
+
+# ==============================================================================
+# Created by https://dockerignore.com/
+# COMMON TEMPLATE for Docker
+# Website: https://dockerignore.com/
+# Repository: https://github.com/ronald2wing/.dockerignore
+# ==============================================================================
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# TEMPLATE OVERVIEW & USAGE NOTES
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# • TEMPLATE TYPE: COMMON TEMPLATE
+# • PURPOSE: Docker-specific patterns
+# • DESIGN PHILOSOPHY: Modular Docker patterns
+# • COMBINATION GUIDANCE: Combine with language or framework templates
+# • SECURITY CONSIDERATIONS: Should be excluded from images
+# • BEST PRACTICES: Exclude Docker files from builds
+# • OFFICIAL SOURCES: Docker best practices and community patterns
+
+# ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+# Build Output
+# ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+**/.docker-build/
+**/docker-build/
+**/docker-build-output/
+
+docker-build.log
+
+# ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+# Cache & Temp
+# ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+**/.docker-tmp/
+**/docker-tmp/
+
+# ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+# Logs & Debug
+# ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+**/docker-logs/
+
+# ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+# Docker Files
+# ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+**/.docker/
+**/docker-cache/
+**/docker-context/
+**/docker-networks/
+**/docker-volumes/
+
+.dockercfg
+.dockerconfig
+.dockerconfig.json
+.dockerignore
+
+Dockerfile.dev
+Dockerfile.example
+Dockerfile.local
+Dockerfile.test
+
+docker-compose.ci.yml
+docker-compose.debug.yml
+docker-compose.dev.yml
+docker-compose.example.yml
+docker-compose.local.yml
+docker-compose.override.yml
+docker-compose.test.yml
+
+docker-security-scan.json
+docker-vulnerability-report.json
+grype-report.json
+snyk-report.json
+trivy-report.json
+
+# --- 自己補的 ---
+.git
+.env
+.env.*
+.vscode
